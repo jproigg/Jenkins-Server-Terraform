@@ -7,10 +7,10 @@ terraform {
   }
 
   cloud {
-    organization = var.terraform_user
+    organization = "jproig"
 
     workspaces {
-      name = var.terraform_workspace
+      name = "Jenkins"
     }
   }
 
