@@ -2,7 +2,10 @@ name: 'Terraform'
 
 on:
   push:
+    branches: [ "dev" ]
+  pull_request:
     branches: [ "main" ]
+    
 
 
 jobs:
@@ -36,6 +39,3 @@ jobs:
     - name: Terraform Plan
       run: terraform plan 
 
-    # Applies terraform code
-    - name: Terraform Apply
-      run: terraform apply -auto-approve -input=false
