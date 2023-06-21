@@ -32,16 +32,16 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      working-directory: 'infra/**'
+      working-directory: 'infra/'
       run: terraform init
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
-      working-directory: 'infra/**'
+      working-directory: 'infra/'
       run: terraform fmt -check
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
-      working-directory: 'infra/**'
+      working-directory: 'infra/'
       run: terraform plan 
 
