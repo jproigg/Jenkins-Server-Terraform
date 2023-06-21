@@ -5,7 +5,7 @@ on:
     branches:
       - 'main'
     paths:
-      - 'infra/**'
+      - 'infra/'
   workflow_dispatch:
     
 
@@ -37,4 +37,4 @@ jobs:
     # Applies terraform code
     - name: Terraform Apply
       working-directory: 'infra/'
-      run: terraform apply -auto-approve -input=false
+      run: terraform apply #-auto-approve -input=false
